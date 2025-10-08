@@ -10,68 +10,102 @@ const Index = () => {
     { 
       year: 1803, 
       title: 'Рождение', 
-      description: 'Родился в Симбирске в дворянской семье',
+      description: 'Николай Михайлович Языков родился 4 марта 1803 года в Симбирске в старинной дворянской семье. Отец — Михаил Петрович Языков, состоятельный помещик. С раннего детства будущий поэт воспитывался в атмосфере культуры и образованности, имел доступ к обширной домашней библиотеке.',
       icon: 'Home',
       gradient: 'from-amber-100 to-amber-200'
     },
     { 
       year: 1822, 
       title: 'Университет', 
-      description: 'Поступил в Дерптский университет',
+      description: 'Поступил в Дерптский (Тартуский) университет на философский факультет. В университете познакомился с будущими декабристами, участвовал в студенческих литературных кружках. Здесь начал активно писать стихи, которые сразу обратили на себя внимание современников своей свежестью и энергией.',
       icon: 'GraduationCap',
       gradient: 'from-blue-100 to-blue-200'
     },
     { 
       year: 1826, 
       title: 'Первые стихи', 
-      description: 'Опубликованы первые поэтические произведения',
+      description: 'Опубликованы первые поэтические произведения в петербургских журналах. Стихи Языкова были замечены Пушкиным и Жуковским. Его поэзия отличалась романтическим пафосом, воспеванием свободы и молодости. В этот период создал знаменитые студенческие песни.',
       icon: 'ScrollText',
       gradient: 'from-purple-100 to-purple-200'
     },
     { 
       year: 1831, 
       title: 'Расцвет творчества', 
-      description: 'Период наиболее активной творческой деятельности',
+      description: 'Период наиболее активной и плодотворной творческой деятельности. Языков создает свои лучшие лирические произведения, элегии и послания. Близко общается с Пушкиным, Гоголем, Киреевским. Его поэзия достигает зрелости, сочетая романтический порыв с философским осмыслением жизни.',
       icon: 'Star',
       gradient: 'from-yellow-100 to-yellow-200'
     },
     { 
       year: 1846, 
       title: 'Уход из жизни', 
-      description: 'Скончался в Москве',
+      description: 'Скончался 26 декабря 1846 года в Москве после продолжительной болезни. Последние годы жизни провел в путешествиях по Европе, лечился на водах. Похоронен в Симбирске. Оставил после себя богатое поэтическое наследие, высоко оцененное современниками и потомками.',
       icon: 'Church',
       gradient: 'from-gray-100 to-gray-200'
     }
   ];
 
   const works = [
-    { title: 'Водопад', year: 1830, quote: 'Шуми, шуми с крутой вершины...' },
-    { title: 'Элегия', year: 1824, quote: 'Блажен, кто мог на миг хоть брать...' },
-    { title: 'Пловец', year: 1829, quote: 'Нелюдимо наше море...' },
-    { title: 'Землетрясение', year: 1828, quote: 'И всё дрожит, и стонет всё...' }
+    { 
+      title: 'Водопад', 
+      year: 1830, 
+      quote: 'Шуми, шуми с крутой вершины...',
+      description: 'Одно из самых известных стихотворений Языкова, воспевающее величие природы и силу стихий. Поэт использует яркие образы и динамичный ритм для передачи мощи водопада.'
+    },
+    { 
+      title: 'Элегия', 
+      year: 1824, 
+      quote: 'Блажен, кто мог на миг хоть брать...',
+      description: 'Философская элегия о быстротечности жизни и ценности каждого мгновения. Отражает романтическое мировоззрение молодого поэта и его размышления о смысле бытия.'
+    },
+    { 
+      title: 'Пловец', 
+      year: 1829, 
+      quote: 'Нелюдимо наше море...',
+      description: 'Стихотворение-метафора о жизненном пути человека, его борьбе со стихией судьбы. Считается одним из лучших образцов романтической лирики Языкова.'
+    },
+    { 
+      title: 'Землетрясение', 
+      year: 1828, 
+      quote: 'И всё дрожит, и стонет всё...',
+      description: 'Драматическое произведение, в котором поэт через описание природной катастрофы передает трагические потрясения человеческой души и общественной жизни.'
+    },
+    {
+      title: 'Моя родина',
+      year: 1825,
+      quote: 'Мой друг! Что может быть милей...',
+      description: 'Лирическое стихотворение о любви к родной земле, к Волге и Симбирску. Пронизано теплыми воспоминаниями детства и юности.'
+    },
+    {
+      title: 'Тригорское',
+      year: 1826,
+      quote: 'Тригорское! Тригорское!',
+      description: 'Посвящено имению Осиповых-Вульф, где Языков гостил вместе с Пушкиным. Стихотворение воспевает дружбу, поэзию и радость жизни.'
+    }
   ];
 
   const facts = [
-    'Был другом А.С. Пушкина и входил в его литературный круг',
-    'Учился в Дерптском университете вместе с будущими декабристами',
-    'Его поэзию высоко ценили В.Г. Белинский и Н.В. Гоголь',
-    'Последние годы жизни провел в путешествиях по Европе'
+    'Был близким другом А.С. Пушкина и входил в его литературный круг. Пушкин высоко ценил поэзию Языкова, называл его «первым из наших элегических поэтов». Языков посвятил Пушкину несколько восторженных стихотворений.',
+    'Учился в Дерптском (Тартуском) университете вместе с будущими декабристами. Был дружен с М.А. Бакуниным, И.В. Киреевским. Студенческие годы оказали большое влияние на формирование его вольнолюбивых взглядов.',
+    'Его поэзию высоко ценили В.Г. Белинский и Н.В. Гоголь. Белинский отмечал «необыкновенную энергию выражения» в стихах Языкова. Гоголь восхищался музыкальностью и образностью его поэзии.',
+    'Последние годы жизни провел в путешествиях по Европе, лечился на минеральных водах в Германии и Италии. Несмотря на болезнь, продолжал писать стихи, в которых звучали мотивы тоски по родине.',
+    'Его брат Александр Языков также был известным поэтом. Братья поддерживали творческую переписку, обменивались стихами и литературными новостями.',
+    'Языков был мастером «легкой поэзии» — писал застольные песни, послания друзьям, шуточные стихотворения. Эти произведения отличались остроумием, живостью и непринужденностью стиля.'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       <nav className="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-playfair font-bold text-primary-foreground">
+            <h1 className="text-3xl md:text-4xl font-playfair font-bold text-primary-foreground">
               Николай Языков
             </h1>
-            <div className="hidden md:flex gap-6">
+            <div className="hidden md:flex gap-8">
               {['Биография', 'Творчество', 'Произведения', 'Галерея'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-georgia"
+                  className="text-lg text-primary-foreground/80 hover:text-primary-foreground transition-colors font-georgia"
                 >
                   {item}
                 </a>
@@ -81,29 +115,29 @@ const Index = () => {
         </div>
       </nav>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-primary via-secondary to-primary text-primary-foreground">
+      <section className="py-32 px-6 bg-gradient-to-br from-primary via-secondary to-primary text-primary-foreground">
         <div className="container mx-auto text-center animate-fade-in">
-          <Icon name="Feather" size={64} className="mx-auto mb-6 opacity-80" />
-          <h2 className="text-5xl md:text-7xl font-playfair font-bold mb-4">
+          <Icon name="Feather" size={96} className="mx-auto mb-8 opacity-80" />
+          <h2 className="text-6xl md:text-8xl font-playfair font-bold mb-6">
             Николай Михайлович Языков
           </h2>
-          <p className="text-xl md:text-2xl font-georgia opacity-90 mb-2">
+          <p className="text-3xl md:text-4xl font-georgia opacity-90 mb-4">
             1803 — 1846
           </p>
-          <p className="text-lg font-georgia opacity-80 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-georgia opacity-80 max-w-3xl mx-auto leading-relaxed">
             Русский поэт пушкинской эпохи, мастер лирической поэзии
           </p>
         </div>
       </section>
 
-      <section id="timeline" className="py-16 px-4">
-        <div className="container mx-auto">
-          <h3 className="text-4xl font-playfair font-bold text-center mb-12 text-primary">
+      <section id="timeline" className="py-24 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-center mb-20 text-primary">
             Временная шкала жизни и творчества
           </h3>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-secondary/30"></div>
-            <div className="space-y-8">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1.5 bg-secondary/30"></div>
+            <div className="space-y-12">
               {timelineEvents.map((event, index) => (
                 <div
                   key={event.year}
@@ -112,24 +146,24 @@ const Index = () => {
                   } animate-fade-in`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'}`}>
                     <Card 
-                      className="cursor-pointer transition-all hover:shadow-lg hover:scale-105 border-secondary/20 overflow-hidden"
+                      className="cursor-pointer transition-all hover:shadow-xl hover:scale-105 border-secondary/20 overflow-hidden"
                       onClick={() => setSelectedYear(selectedYear === event.year ? null : event.year)}
                     >
-                      <div className={`h-48 bg-gradient-to-br ${event.gradient} flex items-center justify-center relative`}>
-                        <Icon name={event.icon} size={80} className="text-secondary/30" />
-                        <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-white/80 flex items-center justify-center shadow-lg">
-                          <Icon name="User" size={32} className="text-secondary" />
+                      <div className={`h-64 bg-gradient-to-br ${event.gradient} flex items-center justify-center relative`}>
+                        <Icon name={event.icon} size={100} className="text-secondary/30" />
+                        <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-xl">
+                          <Icon name="User" size={40} className="text-secondary" />
                         </div>
                       </div>
                       <CardHeader>
-                        <CardTitle className="font-playfair text-secondary text-2xl">{event.year}</CardTitle>
+                        <CardTitle className="font-playfair text-secondary text-3xl">{event.year}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <h4 className="font-georgia font-semibold mb-2 text-lg">{event.title}</h4>
+                        <h4 className="font-georgia font-semibold mb-3 text-xl">{event.title}</h4>
                         {selectedYear === event.year && (
-                          <p className="text-sm text-muted-foreground animate-fade-in mt-3 pt-3 border-t">
+                          <p className="text-base text-muted-foreground animate-fade-in mt-4 pt-4 border-t leading-relaxed">
                             {event.description}
                           </p>
                         )}
@@ -137,7 +171,7 @@ const Index = () => {
                     </Card>
                   </div>
                   <div className="w-2/12 flex justify-center">
-                    <div className="w-5 h-5 rounded-full bg-secondary border-4 border-background shadow-lg"></div>
+                    <div className="w-6 h-6 rounded-full bg-secondary border-4 border-background shadow-xl"></div>
                   </div>
                   <div className="w-5/12"></div>
                 </div>
@@ -147,60 +181,71 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="биография" className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section id="биография" className="py-24 px-6 bg-muted/30">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in">
-              <h3 className="text-4xl font-playfair font-bold mb-6 text-primary">
+              <h3 className="text-5xl md:text-6xl font-playfair font-bold mb-8 text-primary">
                 Биография
               </h3>
-              <div className="space-y-4 font-georgia text-foreground/90 leading-relaxed">
+              <div className="space-y-6 font-georgia text-lg text-foreground/90 leading-relaxed">
                 <p>
                   Николай Михайлович Языков родился в 1803 году в Симбирске (ныне Ульяновск) 
-                  в старинной дворянской семье. С детства проявлял интерес к литературе и поэзии.
+                  в старинной дворянской семье. С детства проявлял интерес к литературе и поэзии. 
+                  Отец, Михаил Петрович, был образованным человеком и собрал обширную библиотеку.
                 </p>
                 <p>
                   В 1822 году поступил в Дерптский университет, где познакомился с будущими 
                   декабристами и активно участвовал в студенческой жизни. Именно в этот период 
-                  начал писать свои первые стихотворения.
+                  начал писать свои первые стихотворения, которые сразу обратили на себя внимание 
+                  литературной общественности.
                 </p>
                 <p>
                   Языков был близким другом А.С. Пушкина и входил в его литературный круг. 
-                  Его поэзия отличалась яркой образностью, музыкальностью и глубоким лиризмом.
+                  Его поэзия отличалась яркой образностью, музыкальностью и глубоким лиризмом. 
+                  В 1830-е годы создал свои лучшие произведения, среди которых «Водопад», 
+                  «Пловец», «Тригорское».
+                </p>
+                <p>
+                  Последние годы жизни поэт боролся с тяжелой болезнью, путешествовал по Европе в поисках 
+                  исцеления. Скончался в 1846 году в Москве, оставив значительное поэтическое наследие.
                 </p>
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-96 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-lg flex items-center justify-center border-2 border-secondary/30 shadow-xl">
-                <Icon name="BookOpen" size={120} className="text-secondary/40" />
+              <div className="w-96 h-[500px] bg-gradient-to-br from-secondary/20 to-primary/20 rounded-lg flex items-center justify-center border-2 border-secondary/30 shadow-2xl">
+                <Icon name="BookOpen" size={150} className="text-secondary/40" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="произведения" className="py-16 px-4">
-        <div className="container mx-auto">
-          <h3 className="text-4xl font-playfair font-bold text-center mb-12 text-primary">
+      <section id="произведения" className="py-24 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-center mb-20 text-primary">
             Избранные произведения
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {works.map((work, index) => (
               <Card 
                 key={work.title}
-                className="hover:shadow-lg transition-shadow border-secondary/20 animate-fade-in"
+                className="hover:shadow-xl transition-shadow border-secondary/20 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
-                  <CardTitle className="font-playfair text-secondary flex items-center gap-2">
-                    <Icon name="Pen" size={20} />
+                  <CardTitle className="font-playfair text-secondary flex items-center gap-3 text-2xl">
+                    <Icon name="Pen" size={28} />
                     {work.title}
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground font-georgia">{work.year} год</p>
+                  <p className="text-base text-muted-foreground font-georgia mt-2">{work.year} год</p>
                 </CardHeader>
-                <CardContent>
-                  <p className="italic font-georgia text-foreground/80">
+                <CardContent className="space-y-4">
+                  <p className="italic font-georgia text-lg text-foreground/80">
                     "{work.quote}"
+                  </p>
+                  <p className="text-base font-georgia text-foreground/70 leading-relaxed">
+                    {work.description}
                   </p>
                 </CardContent>
               </Card>
@@ -209,22 +254,22 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="галерея" className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <h3 className="text-4xl font-playfair font-bold text-center mb-12 text-primary">
+      <section id="галерея" className="py-24 px-6 bg-muted/30">
+        <div className="container mx-auto max-w-7xl">
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-center mb-20 text-primary">
             Интересные факты
           </h3>
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div className="max-w-5xl mx-auto space-y-8">
             {facts.map((fact, index) => (
               <Card 
                 key={index}
-                className="border-l-4 border-secondary hover:shadow-md transition-shadow animate-fade-in"
+                className="border-l-8 border-secondary hover:shadow-xl transition-shadow animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <CardContent className="py-6">
-                  <div className="flex gap-4 items-start">
-                    <Icon name="Sparkles" size={24} className="text-secondary flex-shrink-0 mt-1" />
-                    <p className="font-georgia text-foreground/90">{fact}</p>
+                <CardContent className="py-8 px-8">
+                  <div className="flex gap-6 items-start">
+                    <Icon name="Sparkles" size={36} className="text-secondary flex-shrink-0 mt-1" />
+                    <p className="font-georgia text-lg text-foreground/90 leading-relaxed">{fact}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -233,10 +278,10 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-primary-foreground py-8 px-4">
+      <footer className="bg-primary text-primary-foreground py-12 px-6">
         <div className="container mx-auto text-center">
-          <Separator className="mb-6 bg-primary-foreground/20" />
-          <p className="font-georgia opacity-80">
+          <Separator className="mb-8 bg-primary-foreground/20" />
+          <p className="font-georgia text-lg opacity-80">
             © 2024 Сайт посвящен памяти великого русского поэта Николая Михайловича Языкова
           </p>
         </div>
