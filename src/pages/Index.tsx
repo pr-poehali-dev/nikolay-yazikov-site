@@ -7,11 +7,41 @@ const Index = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   const timelineEvents = [
-    { year: 1803, title: 'Рождение', description: 'Родился в Симбирске в дворянской семье' },
-    { year: 1822, title: 'Университет', description: 'Поступил в Дерптский университет' },
-    { year: 1826, title: 'Первые стихи', description: 'Опубликованы первые поэтические произведения' },
-    { year: 1831, title: 'Расцвет творчества', description: 'Период наиболее активной творческой деятельности' },
-    { year: 1846, title: 'Уход из жизни', description: 'Скончался в Москве' }
+    { 
+      year: 1803, 
+      title: 'Рождение', 
+      description: 'Родился в Симбирске в дворянской семье',
+      icon: 'Home',
+      gradient: 'from-amber-100 to-amber-200'
+    },
+    { 
+      year: 1822, 
+      title: 'Университет', 
+      description: 'Поступил в Дерптский университет',
+      icon: 'GraduationCap',
+      gradient: 'from-blue-100 to-blue-200'
+    },
+    { 
+      year: 1826, 
+      title: 'Первые стихи', 
+      description: 'Опубликованы первые поэтические произведения',
+      icon: 'ScrollText',
+      gradient: 'from-purple-100 to-purple-200'
+    },
+    { 
+      year: 1831, 
+      title: 'Расцвет творчества', 
+      description: 'Период наиболее активной творческой деятельности',
+      icon: 'Star',
+      gradient: 'from-yellow-100 to-yellow-200'
+    },
+    { 
+      year: 1846, 
+      title: 'Уход из жизни', 
+      description: 'Скончался в Москве',
+      icon: 'Church',
+      gradient: 'from-gray-100 to-gray-200'
+    }
   ];
 
   const works = [
@@ -84,16 +114,22 @@ const Index = () => {
                 >
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
                     <Card 
-                      className="cursor-pointer transition-all hover:shadow-lg hover:scale-105 border-secondary/20"
+                      className="cursor-pointer transition-all hover:shadow-lg hover:scale-105 border-secondary/20 overflow-hidden"
                       onClick={() => setSelectedYear(selectedYear === event.year ? null : event.year)}
                     >
+                      <div className={`h-48 bg-gradient-to-br ${event.gradient} flex items-center justify-center relative`}>
+                        <Icon name={event.icon} size={80} className="text-secondary/30" />
+                        <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-white/80 flex items-center justify-center shadow-lg">
+                          <Icon name="User" size={32} className="text-secondary" />
+                        </div>
+                      </div>
                       <CardHeader>
-                        <CardTitle className="font-playfair text-secondary">{event.year}</CardTitle>
+                        <CardTitle className="font-playfair text-secondary text-2xl">{event.year}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <h4 className="font-georgia font-semibold mb-2">{event.title}</h4>
+                        <h4 className="font-georgia font-semibold mb-2 text-lg">{event.title}</h4>
                         {selectedYear === event.year && (
-                          <p className="text-sm text-muted-foreground animate-fade-in">
+                          <p className="text-sm text-muted-foreground animate-fade-in mt-3 pt-3 border-t">
                             {event.description}
                           </p>
                         )}
@@ -101,7 +137,7 @@ const Index = () => {
                     </Card>
                   </div>
                   <div className="w-2/12 flex justify-center">
-                    <div className="w-4 h-4 rounded-full bg-secondary border-4 border-background shadow-lg"></div>
+                    <div className="w-5 h-5 rounded-full bg-secondary border-4 border-background shadow-lg"></div>
                   </div>
                   <div className="w-5/12"></div>
                 </div>
