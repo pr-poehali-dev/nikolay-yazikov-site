@@ -214,12 +214,8 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-96 h-[500px] rounded-lg overflow-hidden border-4 border-secondary/30 shadow-2xl">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Yazykov.jpg/800px-Yazykov.jpg" 
-                  alt="Портрет Николая Языкова"
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-96 h-[500px] bg-gradient-to-br from-secondary/20 to-primary/30 rounded-lg flex items-center justify-center border-4 border-secondary/30 shadow-2xl">
+                <Icon name="Feather" size={150} className="text-secondary/50" />
               </div>
             </div>
           </div>
@@ -286,35 +282,29 @@ const Index = () => {
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-7xl">
           <h3 className="text-5xl md:text-6xl font-playfair font-bold text-center mb-20 text-primary">
-            Галерея исторических изображений
+            Галерея
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Yazykov.jpg/800px-Yazykov.jpg"
-                alt="Портрет Н.М. Языкова"
-                className="w-full h-80 object-cover"
-              />
+              <div className="w-full h-80 bg-gradient-to-br from-primary/20 via-secondary/30 to-primary/40 flex items-center justify-center">
+                <Icon name="User" size={120} className="text-secondary/60" />
+              </div>
               <CardContent className="py-4">
                 <p className="font-georgia text-center text-muted-foreground">Портрет Н.М. Языкова</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Simbirsk_XIX.jpg/1024px-Simbirsk_XIX.jpg"
-                alt="Симбирск в XIX веке"
-                className="w-full h-80 object-cover"
-              />
+              <div className="w-full h-80 bg-gradient-to-br from-secondary/20 via-primary/30 to-secondary/40 flex items-center justify-center">
+                <Icon name="Building2" size={120} className="text-primary/60" />
+              </div>
               <CardContent className="py-4">
                 <p className="font-georgia text-center text-muted-foreground">Симбирск, родина поэта</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/University_of_Tartu_main_building.jpg/1024px-University_of_Tartu_main_building.jpg"
-                alt="Дерптский университет"
-                className="w-full h-80 object-cover"
-              />
+              <div className="w-full h-80 bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/50 flex items-center justify-center">
+                <Icon name="GraduationCap" size={120} className="text-secondary/60" />
+              </div>
               <CardContent className="py-4">
                 <p className="font-georgia text-center text-muted-foreground">Дерптский университет</p>
               </CardContent>
