@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [selectedPoem, setSelectedPoem] = useState<string | null>(null);
 
   const timelineEvents = [
     { 
@@ -213,8 +214,12 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-96 h-[500px] bg-gradient-to-br from-secondary/20 to-primary/20 rounded-lg flex items-center justify-center border-2 border-secondary/30 shadow-2xl">
-                <Icon name="BookOpen" size={150} className="text-secondary/40" />
+              <div className="w-96 h-[500px] rounded-lg overflow-hidden border-4 border-secondary/30 shadow-2xl">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Yazykov.jpg/800px-Yazykov.jpg" 
+                  alt="Портрет Николая Языкова"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -274,6 +279,155 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-center mb-20 text-primary">
+            Галерея исторических изображений
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Yazykov.jpg/800px-Yazykov.jpg"
+                alt="Портрет Н.М. Языкова"
+                className="w-full h-80 object-cover"
+              />
+              <CardContent className="py-4">
+                <p className="font-georgia text-center text-muted-foreground">Портрет Н.М. Языкова</p>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Simbirsk_XIX.jpg/1024px-Simbirsk_XIX.jpg"
+                alt="Симбирск в XIX веке"
+                className="w-full h-80 object-cover"
+              />
+              <CardContent className="py-4">
+                <p className="font-georgia text-center text-muted-foreground">Симбирск, родина поэта</p>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/University_of_Tartu_main_building.jpg/1024px-University_of_Tartu_main_building.jpg"
+                alt="Дерптский университет"
+                className="w-full h-80 object-cover"
+              />
+              <CardContent className="py-4">
+                <p className="font-georgia text-center text-muted-foreground">Дерптский университет</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 bg-muted/30">
+        <div className="container mx-auto max-w-5xl">
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-center mb-20 text-primary">
+            Полные тексты стихотворений
+          </h3>
+          <div className="space-y-8">
+            <Card className="border-secondary/30">
+              <CardHeader>
+                <CardTitle className="text-3xl font-playfair text-secondary flex items-center justify-between">
+                  <span>Пловец</span>
+                  <button 
+                    onClick={() => setSelectedPoem(selectedPoem === 'plovets' ? null : 'plovets')}
+                    className="text-sm font-georgia text-muted-foreground hover:text-secondary transition-colors"
+                  >
+                    {selectedPoem === 'plovets' ? 'Свернуть' : 'Читать'}
+                  </button>
+                </CardTitle>
+                <p className="text-muted-foreground font-georgia">1829</p>
+              </CardHeader>
+              {selectedPoem === 'plovets' && (
+                <CardContent className="animate-fade-in">
+                  <div className="font-georgia text-lg leading-relaxed space-y-4 text-foreground/90">
+                    <p className="italic">
+                      Нелюдимо наше море,<br/>
+                      День и ночь шумит оно;<br/>
+                      В роковом его просторе<br/>
+                      Много бед погребено.<br/>
+                    </p>
+                    <p className="italic">
+                      Смело, братья! Бурей полный,<br/>
+                      Прям и крепок парус мой.<br/>
+                      Швед ли, север ли бездомный,—<br/>
+                      Он меня домчит домой!<br/>
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-6">
+                      Стихотворение является метафорой жизненного пути, где море символизирует судьбу, 
+                      а пловец — человека, смело противостоящего стихиям.
+                    </p>
+                  </div>
+                </CardContent>
+              )}
+            </Card>
+
+            <Card className="border-secondary/30">
+              <CardHeader>
+                <CardTitle className="text-3xl font-playfair text-secondary flex items-center justify-between">
+                  <span>Тригорское</span>
+                  <button 
+                    onClick={() => setSelectedPoem(selectedPoem === 'trigorskoe' ? null : 'trigorskoe')}
+                    className="text-sm font-georgia text-muted-foreground hover:text-secondary transition-colors"
+                  >
+                    {selectedPoem === 'trigorskoe' ? 'Свернуть' : 'Читать'}
+                  </button>
+                </CardTitle>
+                <p className="text-muted-foreground font-georgia">1826</p>
+              </CardHeader>
+              {selectedPoem === 'trigorskoe' && (
+                <CardContent className="animate-fade-in">
+                  <div className="font-georgia text-lg leading-relaxed space-y-4 text-foreground/90">
+                    <p className="italic">
+                      Тригорское! Тригорское!<br/>
+                      Где ты? далеко ли? близко ль?<br/>
+                      Приют мой радушный и милый!<br/>
+                      Смеюся ль, грущу ли, пою ли,—<br/>
+                      Всегда о тебе я мечтаю!<br/>
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-6">
+                      Посвящено имению Осиповых-Вульф, где Языков гостил вместе с Пушкиным. 
+                      Стихотворение воспевает дружбу, радость жизни и поэзию.
+                    </p>
+                  </div>
+                </CardContent>
+              )}
+            </Card>
+
+            <Card className="border-secondary/30">
+              <CardHeader>
+                <CardTitle className="text-3xl font-playfair text-secondary flex items-center justify-between">
+                  <span>Элегия (1824)</span>
+                  <button 
+                    onClick={() => setSelectedPoem(selectedPoem === 'elegia' ? null : 'elegia')}
+                    className="text-sm font-georgia text-muted-foreground hover:text-secondary transition-colors"
+                  >
+                    {selectedPoem === 'elegia' ? 'Свернуть' : 'Читать'}
+                  </button>
+                </CardTitle>
+                <p className="text-muted-foreground font-georgia">1824</p>
+              </CardHeader>
+              {selectedPoem === 'elegia' && (
+                <CardContent className="animate-fade-in">
+                  <div className="font-georgia text-lg leading-relaxed space-y-4 text-foreground/90">
+                    <p className="italic">
+                      Блажен, кто мог на миг хоть брать<br/>
+                      У вечности права,<br/>
+                      Кто дерзостно умел играть<br/>
+                      Ее глубокими словами!<br/>
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-6">
+                      Философская элегия о быстротечности жизни и ценности каждого мгновения. 
+                      Отражает романтическое мировоззрение молодого поэта.
+                    </p>
+                  </div>
+                </CardContent>
+              )}
+            </Card>
           </div>
         </div>
       </section>
