@@ -214,8 +214,16 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-96 h-[500px] bg-gradient-to-br from-secondary/20 to-primary/30 rounded-lg flex items-center justify-center border-4 border-secondary/30 shadow-2xl">
-                <Icon name="Feather" size={150} className="text-secondary/50" />
+              <div className="w-96 h-[500px] rounded-lg overflow-hidden border-4 border-secondary/30 shadow-2xl">
+                <img 
+                  src="https://i.imgur.com/YQZ8Z9X.jpg" 
+                  alt="Портрет Николая Языкова"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-secondary/20 to-primary/30 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary/50"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg></div>';
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -286,25 +294,40 @@ const Index = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="w-full h-80 bg-gradient-to-br from-primary/20 via-secondary/30 to-primary/40 flex items-center justify-center">
-                <Icon name="User" size={120} className="text-secondary/60" />
-              </div>
+              <img 
+                src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
+                alt="Портрет Н.М. Языкова"
+                className="w-full h-80 object-cover"
+                onError={(e) => {
+                  e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-80 bg-gradient-to-br from-primary/20 via-secondary/30 to-primary/40 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary/60"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="py-4 px-6"><p class="font-georgia text-center text-muted-foreground">Портрет Н.М. Языкова</p></div>';
+                }}
+              />
               <CardContent className="py-4">
                 <p className="font-georgia text-center text-muted-foreground">Портрет Н.М. Языкова</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="w-full h-80 bg-gradient-to-br from-secondary/20 via-primary/30 to-secondary/40 flex items-center justify-center">
-                <Icon name="Building2" size={120} className="text-primary/60" />
-              </div>
+              <img 
+                src="https://cdn.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg"
+                alt="Симбирск в XIX веке"
+                className="w-full h-80 object-cover"
+                onError={(e) => {
+                  e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-80 bg-gradient-to-br from-secondary/20 via-primary/30 to-secondary/40 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary/60"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div><div class="py-4 px-6"><p class="font-georgia text-center text-muted-foreground">Симбирск, родина поэта</p></div>';
+                }}
+              />
               <CardContent className="py-4">
                 <p className="font-georgia text-center text-muted-foreground">Симбирск, родина поэта</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="w-full h-80 bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/50 flex items-center justify-center">
-                <Icon name="GraduationCap" size={120} className="text-secondary/60" />
-              </div>
+              <img 
+                src="https://cdn.pixabay.com/photo/2017/07/21/23/57/university-2527900_1280.jpg"
+                alt="Дерптский университет"
+                className="w-full h-80 object-cover"
+                onError={(e) => {
+                  e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-80 bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/50 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary/60"><circle cx="12" cy="10" r="1"/><path d="M22 20V8h-4l-6-4-6 4H2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2"/><path d="M6 17v.01"/><path d="M6 13v.01"/><path d="M18 17v.01"/><path d="M18 13v.01"/><path d="M14 22v-5a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/></svg></div><div class="py-4 px-6"><p class="font-georgia text-center text-muted-foreground">Дерптский университет</p></div>';
+                }}
+              />
               <CardContent className="py-4">
                 <p className="font-georgia text-center text-muted-foreground">Дерптский университет</p>
               </CardContent>
