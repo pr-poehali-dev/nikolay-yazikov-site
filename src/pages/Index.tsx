@@ -216,8 +216,8 @@ const Index = () => {
             <div className="flex justify-center">
               <div className="w-96 h-[500px] rounded-lg overflow-hidden border-4 border-secondary/30 shadow-2xl">
                 <img 
-                  src="https://i.imgur.com/YQZ8Z9X.jpg" 
-                  alt="Портрет Николая Языкова"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Yazykov.jpg/800px-Yazykov.jpg" 
+                  alt="Портрет Николая Михайловича Языкова"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
