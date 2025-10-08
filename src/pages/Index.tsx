@@ -295,7 +295,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
-                src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Yazykov.jpg/800px-Yazykov.jpg"
                 alt="Портрет Н.М. Языкова"
                 className="w-full h-80 object-cover"
                 onError={(e) => {
@@ -308,7 +308,7 @@ const Index = () => {
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
-                src="https://cdn.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simbirsk_late_XIX.jpg/1024px-Simbirsk_late_XIX.jpg"
                 alt="Симбирск в XIX веке"
                 className="w-full h-80 object-cover"
                 onError={(e) => {
@@ -316,20 +316,20 @@ const Index = () => {
                 }}
               />
               <CardContent className="py-4">
-                <p className="font-georgia text-center text-muted-foreground">Симбирск, родина поэта</p>
+                <p className="font-georgia text-center text-muted-foreground">Симбирск в XIX веке, родина поэта</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
-                src="https://cdn.pixabay.com/photo/2017/07/21/23/57/university-2527900_1280.jpg"
-                alt="Дерптский университет"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Tartu_%C3%9Clikool.jpg/1024px-Tartu_%C3%9Clikool.jpg"
+                alt="Дерптский университет (Тарту)"
                 className="w-full h-80 object-cover"
                 onError={(e) => {
                   e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-80 bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/50 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary/60"><circle cx="12" cy="10" r="1"/><path d="M22 20V8h-4l-6-4-6 4H2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2"/><path d="M6 17v.01"/><path d="M6 13v.01"/><path d="M18 17v.01"/><path d="M18 13v.01"/><path d="M14 22v-5a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/></svg></div><div class="py-4 px-6"><p class="font-georgia text-center text-muted-foreground">Дерптский университет</p></div>';
                 }}
               />
               <CardContent className="py-4">
-                <p className="font-georgia text-center text-muted-foreground">Дерптский университет</p>
+                <p className="font-georgia text-center text-muted-foreground">Дерптский университет, где учился Языков</p>
               </CardContent>
             </Card>
           </div>
