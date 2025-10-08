@@ -152,11 +152,43 @@ const Index = () => {
                       className="cursor-pointer transition-all hover:shadow-xl hover:scale-105 border-secondary/20 overflow-hidden"
                       onClick={() => setSelectedYear(selectedYear === event.year ? null : event.year)}
                     >
-                      <div className={`h-64 bg-gradient-to-br ${event.gradient} flex items-center justify-center relative`}>
-                        <Icon name={event.icon} size={100} className="text-secondary/30" />
-                        <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-xl">
-                          <Icon name="User" size={40} className="text-secondary" />
-                        </div>
+                      <div className="h-64 relative overflow-hidden">
+                        {event.year === 1803 && (
+                          <img 
+                            src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&q=80" 
+                            alt="Старинный дом" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {event.year === 1822 && (
+                          <img 
+                            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80" 
+                            alt="Университет" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {event.year === 1826 && (
+                          <img 
+                            src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&q=80" 
+                            alt="Перо и книги" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {event.year === 1831 && (
+                          <img 
+                            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" 
+                            alt="Книги и свечи" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {event.year === 1846 && (
+                          <img 
+                            src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80" 
+                            alt="Старинная церковь" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                       </div>
                       <CardHeader>
                         <CardTitle className="font-playfair text-secondary text-3xl">{event.year}</CardTitle>
